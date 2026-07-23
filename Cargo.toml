@@ -1,0 +1,26 @@
+[package]
+name = "beevulyk-service-sdk-macros"
+version = "0.1.0"
+edition = "2024"
+description = "Proc-macro helpers for beevulyk-service-sdk (SdkSettingsTraits, AutoGenerateSettingsTraits, use_* convenience macros)."
+repository = "https://github.com/BeeVulyk/beevulyk-service-sdk-macros"
+license = "MIT OR Apache-2.0"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = []
+grpc = []
+postgresql = []
+sqlite = []
+redis = []
+kafka = []
+
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "*"
+proc-macro2 = "*"
+syn = { version = "2", features = ["full"] }
